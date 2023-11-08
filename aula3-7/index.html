@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fluxo de decisão</title>
+    <style>
+        input[type='button'] {
+            padding: 8px;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-<body>
+<body style="text-align: center;">
+    <h1>Fluxo de decisão</h1>
+
+    <input type="button" value="Iniciar jogo" onclick="jogo()">
     
+    <script>
+
+        function jogo() {
+            let area = parseInt(prompt('Você gostaria de aprender mais sobre:\n[1] - Front-End\n[2] - Back-End'));
+
+            if (area == 1) {
+                prompt('Quer aprender \n[1] - React\n[2] - Vue');
+                var areaF = 'Front-End';
+            } else {
+                prompt('Quer aprender \n[1] - C#\n[2] - Java');
+                var areaF = 'Back-End';
+            }
+            
+            let fullstack = parseInt(prompt(`Você pretende se \n[1] - Especializar no ${areaF}\n[2] - Tornar um Fullstack`));
+            
+            if (fullstack == 1) {
+                alert('Você será um ótimo desenvolvedor.');
+            } else {
+                alert('Você terá um amplo conhecimento de várias tecnologias.');
+            }
+
+            let tecnologia = prompt('Qual tecnologia você gostaria de se especializar ou conhecer?');
+            alert(`Excelente escolha, ${tecnologia} é uma ótima tecnologia.`);
+
+            let tec = prompt('Tem mais alguma tecnologia que gostaria de aprender? Digite \"ok\" em caso positivo.');
+
+            while (tec === 'ok') {
+                let novaTec = prompt('Qual?');
+                alert(`Boa escolha, ${novaTec} é perfeita para você.`);
+                tec = prompt('Tem mais alguma tecnologia que gostaria de aprender? Digite \"ok\" em caso positivo.');
+            }
+        }
+    </script>
 </body>
 </html>
