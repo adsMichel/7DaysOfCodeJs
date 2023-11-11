@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body style="text-align: center;">
+    <h1>Calculadora</h1>
+    <h3>Uma pequena Calculadora utilizando functions do Javascript.</h3>
+
+    <script>
+        let operacao = 1;
+        while (operacao == 1) {
+
+            let operacao = parseInt(prompt('Qual operação deseja realizar?\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n\n5 - Sair'));
+            
+            if (operacao == 5) {
+                alert('Até a próxima');
+                break;
+            }
+
+            let valor1 = parseInt(prompt('Digite o primeiro valor:'));
+            let valor2 = parseInt(prompt('Digite o segundo valor:'));
+
+            if (operacao == 1) {
+                function adicao(a, b) {
+                    return a + b;
+                }
+                alert(`Resultado = ${adicao(valor1, valor2)}`);
+            } else if (operacao == 2) {
+
+                function subtracao(a, b) {
+                    return a - b;
+                }
+                alert(`Resultado = ${subtracao(valor1, valor2)}`);
+            } else if (operacao == 3) {
+
+                function multiplicacao(a, b) {
+                    return a * b;
+                }
+                alert(`Resultado = ${multiplicacao(valor1, valor2)}`)
+            } else {
+                if (valor1 == '' || valor1 == 0) {
+                    alert('Informe um número válido e diferente de zero.');
+                } else {
+
+                    function divisao(a, b) {
+                        return a / b;
+                    }
+                    alert(`Resultado = ${divisao(valor1, valor2)}`);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    Crie a sua própria calculadora, porém com um detalhe muito importante: cada operação deverá ser uma função diferente no seu código.
+
+Primeiramente, a pessoa deverá escolher uma opção de operação impressa pelo programa na tela.
+
+Depois, ela deverá inserir os dois valores que deseja utilizar, e o programa imprimirá o resultado da operação em questão.
+
+As opções disponíveis deverão ser: soma, subtração, multiplicação, divisão, e sair. Nessa última, o programa deverá parar de ser executado, mostrando uma mensagem "Até a próxima"
+-->
