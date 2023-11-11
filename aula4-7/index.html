@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Booleanas</title>
+</head>
+<body style="text-align: center;">
+    <h1>Advinhe o número??</h1>
+    <h3>Tente advinhar o  <i>número</i> e veja o resultado.</h3>
+
+    <input type="button" value="Jogar" onclick="advinhar()">
+    
+    <script>
+        
+        function advinhar() {
+            let numeroDaSorte = parseInt((Math.random() * 10).toFixed(0));
+            let i = 0;
+            
+            while (i < 3) {
+                let numero = parseInt(prompt('Que número você acha que é de 0 a 10? Chute!'))
+                
+                if (numero === numeroDaSorte) {
+                    alert('Você acertou! Parabéns.')
+                    break
+                } else {
+
+                    alert(`Você tem ${2 - i} tentativas.`);
+                    i++;
+                }
+            }
+            alert(`O número secreto é ${numeroDaSorte}`)
+        }
+    </script>
+</body>
+</html>
