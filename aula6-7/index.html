@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remover item da lista</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body style="text-align: center;">
@@ -51,10 +52,12 @@
                         let delItem = congelados.indexOf(remover);
                         congelados.splice(delItem, 1);
                         alert(`O produto ${remover} foi removido da sua lista de congelados.`)
-                    } else {
+                    } else if (doces.indexOf(remover) > -1) {
                         let delItem = doces.indexOf(remover);
                         doces.splice(delItem, 1);
                         alert(`O produto ${remover} foi removido da sua lista de doces.`)
+                    } else {
+                        alert(`O produto ${remover} não existe na sua lista.`);
                     }
                 } else {
                     alert('Lista vazia!');
