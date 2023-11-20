@@ -11,25 +11,27 @@
 <body style="text-align: center;">
     <h1>Lista de compras</h1>
     <h3>Uma pequena lista de compras te ajudará no seu dia-a-dia.</h3>
-
+    <input type="button" value="Iniciar Lista" onclick="lista()">
 
     <script>
-        let frutas = [];
-        let legumes = [];
-        let laticinios = [];
-        let congelados = [];
-        let doces = [];
-        let pergunta = 1;
-        while (pergunta == 1) {
+        function lista() {
 
-            let pergunta = parseInt(prompt('Digite a opção:\n\n[1] - Adicionar item na lista\n[2] - Sair\n[3] - Remover item da lista'));
-            if (pergunta == 2) {
-
-                if (frutas == '' && legumes == '' && laticinios == '' && congelados == '' && doces == '') {
-                    break;
-                } else {
-                    alert(`Lista de compras:\n\nFrutas: ${frutas}\nLegumes: ${legumes}\nLaticínios: ${laticinios}\nCongelados: ${congelados}\nDoces: ${doces}`)
-                    break;
+            let frutas = [];
+            let legumes = [];
+            let laticinios = [];
+            let congelados = [];
+            let doces = [];
+            let pergunta = 1;
+            while (pergunta == 1) {
+                
+                let pergunta = parseInt(prompt('Digite a opção:\n\n[1] - Adicionar item na lista\n[2] - Sair\n[3] - Remover item da lista'));
+                if (pergunta == 2) {
+                    
+                    if (frutas == '' && legumes == '' && laticinios == '' && congelados == '' && doces == '') {
+                        break;
+                    } else {
+                        alert(`Lista de compras:\n\nFrutas: ${frutas}\nLegumes: ${legumes}\nLaticínios: ${laticinios}\nCongelados: ${congelados}\nDoces: ${doces}`)
+                        break;
                 }
             }
             if (pergunta == 3) {
@@ -64,9 +66,9 @@
                     break;
                 }
             }
-
+            
             if (pergunta == 1) {
-
+                
                 
                 let produto = prompt('Qual comida você deseja inserir?');
                 let categoria = parseInt(prompt(`Qual categoria ${produto} pertence?\n\nDigite a opção:\n\n1 - Frutas\n2 - Legumes\n3 - Laticínios\n4 - Congelados\n5 - Doces`));
@@ -84,14 +86,15 @@
                 }
             }
         }
-    </script>
-</body>
-
-</html>
-
-<!--
-    Você deverá criar a opção de remover algum item da lista, que será exibida junto à pergunta de “você deseja adicionar uma comida na lista de compras”?
-
+    }
+        </script>
+        </body>
+        
+        </html>
+        
+        <!--
+            Você deverá criar a opção de remover algum item da lista, que será exibida junto à pergunta de “você deseja adicionar uma comida na lista de compras”?
+            
 A partir daí, caso a pessoa escolha essa opção, o programa irá imprimir os elementos presentes na lista atual, e a pessoa deverá escrever qual deles deseja remover.
 
 Depois disso, o programa irá remover o elemento da lista e imprimir a confirmação de que o item realmente não está mais lá.

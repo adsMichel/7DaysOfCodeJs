@@ -9,20 +9,24 @@
 <body>
     <h1>Variáveis</h1>
     <h3>Abra o <i>console</i> e veja as interações.</h3>
+    <input type="button" value="Iniciar Perguntas" onclick="perguntas()">
 
     <script>
-        const nome = prompt('Qual o seu nome?');
-        const idade = prompt('Quantos anos você tem?');
-        const linguagem = prompt('Qual linguagem de programação você está estudando?');
-        const msg = `Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
-        alert(msg)
-        const resposta = parseInt(prompt(`Você gosta de estudar ${linguagem}? Digite 1 para SIM, 2 para NÃO`));
+        function perguntas() {
 
-        if (resposta == 1) {
-            alert('Muito bom! Continue estudando e você terá muito sucesso.');
-        }else {
-            alert('Ahh que pena... Já tentou aprender outras linguagens?')
+            const nome = prompt('Qual o seu nome?');
+            const idade = prompt('Quantos anos você tem?');
+            const linguagem = prompt('Qual linguagem de programação você está estudando?');
+            const msg = `Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
+            alert(msg)
+            const resposta = parseInt(prompt(`Você gosta de estudar ${linguagem}? \n\n[1] - SIM    [2] - NÃO`));
+            
+            if (resposta == 1) {
+                alert('Muito bom! Continue estudando com foco e você terá muito sucesso.');
+            }else {
+                alert('Ahh que pena... Já tentou aprender outras linguagens?');
             }
+        }
     </script>
 </body>
 </html>

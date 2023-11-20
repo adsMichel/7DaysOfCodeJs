@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body style="text-align: center;">
     <h1>Calculadora</h1>
     <h3>Uma pequena Calculadora utilizando functions do Javascript.</h3>
+    <input type="button" value="Iniciar Calculadora" onclick="calculadora()">
 
     <script>
-        let operacao = 1;
-        while (operacao == 1) {
+        function calculadora() {
 
+            let operacao = 1;
+            while (operacao == 1) {
+                
             let operacao = parseInt(prompt('Qual operação deseja realizar?\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n\n5 - Sair'));
             
             if (operacao == 5) {
                 alert('Até a próxima');
                 break;
             }
-
+            
             let valor1 = parseInt(prompt('Digite o primeiro valor:'));
             let valor2 = parseInt(prompt('Digite o segundo valor:'));
 
@@ -31,13 +35,13 @@
                 }
                 alert(`Resultado = ${adicao(valor1, valor2)}`);
             } else if (operacao == 2) {
-
+                
                 function subtracao(a, b) {
                     return a - b;
                 }
                 alert(`Resultado = ${subtracao(valor1, valor2)}`);
             } else if (operacao == 3) {
-
+                
                 function multiplicacao(a, b) {
                     return a * b;
                 }
@@ -46,7 +50,7 @@
                 if (valor1 == '' || valor1 == 0) {
                     alert('Informe um número válido e diferente de zero.');
                 } else {
-
+                    
                     function divisao(a, b) {
                         return a / b;
                     }
@@ -54,7 +58,8 @@
                 }
             }
         }
-    </script>
+    }
+        </script>
 </body>
 
 </html>
