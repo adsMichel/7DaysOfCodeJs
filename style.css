@@ -6,23 +6,16 @@ body {
     text-align: center;
 }
 
-<<<<<<< HEAD
 main {
     display: flex;
     justify-content: center;
 }
 
-=======
->>>>>>> e0af20cf208962219697a807b8e7ac2cc35afacb
 nav ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-<<<<<<< HEAD
     justify-content: center;
-=======
-    justify-content: space-evenly;
->>>>>>> e0af20cf208962219697a807b8e7ac2cc35afacb
     margin-top: 5%;
     gap: 10px;
 }
