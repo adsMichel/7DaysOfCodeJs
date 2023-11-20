@@ -6,11 +6,16 @@ body {
     text-align: center;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
 nav ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 5%;
     gap: 10px;
 }
